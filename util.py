@@ -20,13 +20,12 @@ def MAE(ytrue, ypred):
 def MSE(ytrue, ypred):
     ytrue = np.array(ytrue).ravel()
     ypred = np.array(ypred).ravel()
-    return (np.square((ytrue - ypred)))
+    return np.mean(np.square((ytrue - ypred)))
 
 
 def RMSE(ypred, ytrue):
-    rse = np.sqrt(np.square(ypred - ytrue).sum()) / \
-        np.sqrt(np.square(ytrue - ytrue.mean()).sum())
-    return rse
+    rsme = np.sqrt(np.mean(np.square(ypred - ytrue))) 
+    return rsme
 
 
 # __________

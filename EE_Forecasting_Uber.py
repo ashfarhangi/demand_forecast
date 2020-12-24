@@ -272,4 +272,4 @@ if __name__ == "__main__":
         plt.xlabel("Period")
         plt.ylabel("Loss")
         plt.show()
-        plt.save_fig('.//training_EE.png')
+        plt.savefig('training_EE.png')
